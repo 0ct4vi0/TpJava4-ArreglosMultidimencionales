@@ -5,16 +5,23 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-
-
-
-
-
-
-
-
-
-
+//                                                          EJERCICIO 1
+//        Scanner sc = new Scanner(System.in);
+//        String[][] paises = new String[4][4];
+//        for (int i = 0; i < paises.length; i++) {
+//            System.out.println("ingrese un pais");
+//            paises[i][i] = sc.nextLine();
+//            for (int j = 0; j < paises[0].length; j++) {
+//                System.out.println("ingrese tres ciudades");
+//                paises[i][j] = sc.nextLine();
+//            }
+//        }
+//        for (int i = 0; i < 4; i++) {
+//            System.out.println("Pais: " + paises[i][i]);
+//            for (int j = 0; j < 4; j++) {
+//                System.out.println("Ciudades: " + paises[i][j]);
+//            }
+//        }
 
 //                                                           EJERCICIO 2
 //
@@ -59,7 +66,7 @@ public class Main {
 //        }
 //        return resultado;
 
-//                                                        EJERCICIO 3
+//                                                          EJERCICIO 3
 
 //        Scanner sc = new Scanner(System.in);
 //        while (true){
