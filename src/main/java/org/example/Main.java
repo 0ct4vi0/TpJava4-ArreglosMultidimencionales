@@ -62,11 +62,34 @@ public class Main {
         if (stickActual > 0) {
             golosinas[codigo - 1][2] = Integer.toString(stickActual - 1);
             System.out.println("gracias por su compra" + golosinas[codigo - 1][0] + ".");
-            montoTotal+= Double.parseDouble( golosinas[codigo - 1][1]);
+            montoTotal += Double.parseDouble(golosinas[codigo - 1][1]);
             menuDeOpciones();
-        }else {
-            System.out.println("la golosina "+ golosinas[codigo - 1][0]+"no posee stock, pro favor seleccione otra golosina");
+        } else {
+            System.out.println("la golosina " + golosinas[codigo - 1][0] + "no posee stock, pro favor seleccione otra golosina");
             pedirGolosina();
+        }
+    }
+
+    // METODO PARA RELLENAR LAS GOLOSINAS-------------------
+    public static void rellenarGolosina() {
+        System.out.println("ingrese la clave para ejecutar esta funcion");
+        String clave = new Scanner(System.in).nextLine();
+        if (clave.equalsIgnoreCase("AdminXYZ")){
+            System.out.println("clave correcta");
+            while (true) {
+                mostrarGolosina();
+                System.out.println("ingrese el codigo de la golosina");
+                int codigo = new Scanner(System.in).nextInt();
+                if (codigoIncorrecto(codigo)) {
+                    System.out.println("ERROR;codigo ingresado incorrercto");
+                } else {
+                    System.out.println("ingrese la cantidad a rellenat");
+                    int cantidad = new Scanner(System.in).nextInt();
+                    golosinas[codigo - 1][2] = Integer.toString(Integer.parseInt(golosinas[codigo - 1][2] + cantidad));
+                    System.out.println("El stock de la golosinas " + golosinas[codigo - 1][0] + " fue actualizado, stock actual: " + golosinas[codigo - 1]);
+                    menuDeOpciones();
+                }
+            }
         }
     }
 
@@ -97,7 +120,3 @@ public class Main {
         return true;
     }
 }
-
-
-
-
