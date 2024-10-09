@@ -1,0 +1,33 @@
+Index: src/main/java/org/example/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.example;\r\nimport java.util.Scanner;\r\n//TIP To <b>Run</b> code, press <shortcut actionId=\"Run\"/> or\r\n// click the <icon src=\"AllIcons.Actions.Execute\"/> icon in the gutter.\r\npublic class Main {\r\n    public static void main(String[] args) {\r\n        Scanner sc = new Scanner(System.in);\r\n        System.out.println(\"ingrese el valor X: \");\r\n        int x = sc.nextInt();\r\n        System.out.println(\"ingrese ek valor Y: \");\r\n        int y = sc.nextInt();\r\n        int [][] a1 = new int [x][y];\r\n        int [][] a2 = new int [x][y];\r\n        for (int i = 0; i < x; i++) {\r\n            for (int j = 0; j < y; j++) {\r\n                System.out.print(\"Posicion: \" + i + \", \" + j + \": \");\r\n                a1[i][j] = sc.nextInt();\r\n            }\r\n        }\r\n        for (int i = 0; i < x; i++) {\r\n            for (int j = 0; j < y; j++) {\r\n                System.out.print(\"Posicion: \" + i + \", \" + j + \": \");\r\n                a2[i][j] = sc.nextInt();\r\n            }\r\n        }\r\n        int[][] resultado = multArray(a1,a2);\r\n        for (int i = 0; i < resultado.length; i++) {\r\n            for (int j = 0; j < resultado[i].length; j++) {\r\n                System.out.print(\"la multiplicacion de los array es igual a: \"+resultado);\r\n            }\r\n        }\r\n\r\n    }\r\n    public static int[][] multArray(int [][]a1, int[][] a2){\r\n        int fila= a1[0].length;\r\n        int col = a2[0].length;\r\n        int [][] resultado = new int[fila][col];\r\n        for (int i = 0; i < fila; i++) {\r\n            for (int j = 0; j < col; j++) {\r\n                resultado[i][j] = 0;\r\n                for (int k = 0; k < col; k++) {\r\n                    resultado[i][j] += a1[i][k] * a2[k][j];\r\n                }\r\n            }\r\n        }\r\n        return resultado;\r\n    }\r\n}\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/example/Main.java b/src/main/java/org/example/Main.java
+--- a/src/main/java/org/example/Main.java	(revision fbce98b2da7bb9d30aa9a3aaaf3ad62312c11963)
++++ b/src/main/java/org/example/Main.java	(date 1728502752306)
+@@ -4,6 +4,22 @@
+ // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+ public class Main {
+     public static void main(String[] args) {
++        
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
+         Scanner sc = new Scanner(System.in);
+         System.out.println("ingrese el valor X: ");
+         int x = sc.nextInt();
